@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #131320;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15px;
+    padding: 10px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    margin: 10px;
+    color: #7A7B9F;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.icone-filme, header div a img  {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+header div span {
+    color: #7A7B9F;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header div a {
+    background: #7A7B9F;
+    opacity: 0.5;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+main .secao-filtro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 63vw; */
+    /* margin: 30px; */
+}
+
+main .secao-filtro h1 {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 29px;
+    font-weight: bold;
+}
+main .secao-filtro form {
+    display: flex;
+    gap: 8px;
+}
+
+main .secao-filtro form button {
+    border: none;
+    border-radius: 5px;
+    background-color: #892CCD;
+    padding: 10px;
+    width: 5vw;
+    color: #fff;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+main .secao-filtro form button span {
+    font-size: 25px;
+}
+main .secao-filtro div {
+    display: flex;
+    align-items: center;
+    border: 1px solid #7A7B9F;
+    background-color: #1A1B2D;
+    padding: 10px;
+    border-radius: 5px;
+    gap: 10px;
+}
+main .secao-filtro div img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+main .secao-filtro div input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main .secao-listagem {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main .secao-listagem  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+main .secao-listagem ul li {
+    list-style-type: none;
+    position: relative;
+}
+
+main .secao-listagem ul li img {
+    object-fit: cover;
+    border-radius: 5px;
+    /* filter: opacity(0.4); */
+    height: 420px;
+}
+
+main .secao-listagem ul li .aval {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background-color: #222;
+    border: 1px solid #222;
+    border-radius: 7px;
+    padding: 6px;
+}
+
+
+main .secao-listagem ul li .aval .icone-aval {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+main .secao-listagem ul li img:hover {
+    cursor: pointer;
+    filter: opacity(0.5);
+    filter: brightness(1px);
+}
+
+main .secao-listagem ul li .titulo-filme {
+    color: #fff;
+    position: absolute;
+    top: 330px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+main .secao-listagem ul li .ano {
+    position: absolute;
+    top: 368px;
+    margin-left: 20px;
+    color: #B5B6C9;
+    font-family: Arial, Helvetica, sans-serif;
+}

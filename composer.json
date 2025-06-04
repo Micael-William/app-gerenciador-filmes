@@ -1,0 +1,15 @@
+{
+    "name": "dell/app-filmes",
+    "autoload": {
+        "psr-4": {
+            "Dell\\AppFilmes\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Micael William",
+            "email": "mw931991@gmail.com"
+        }
+    ],
+    "require": {}
+}
