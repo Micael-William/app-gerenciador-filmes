@@ -2,11 +2,14 @@
 require_once "../vendor/autoload.php";
 
 use App\src\CadastroController;
+use App\src\DetalhesFilmeController;
+use App\src\ExplorarController;
 use App\src\LoginController;
 use App\src\LogoutController;
 use App\src\MeusFilmesController;
+use App\src\NotFoundController;
+use App\src\NovoFilmeController;
 
-$rota = require_once "./routes/route.php";
 $pathInfo = $_SERVER["PATH_INFO"] ?? '/';
 
 session_start();
@@ -17,35 +20,42 @@ if ((!array_key_exists('logado', $_SESSION) && $pathInfo == '/meus-filmes') ||
     header('Location: /login');
 }
 
-switch(strtolower($pathInfo)){
+$pathInfo = strtolower($pathInfo);
+
+switch($pathInfo){
     case '/':
-        LoginController::view(str_replace($pathInfo,"/", "{$rota[0]}"));
+        LoginController::view($pathInfo);
         $route = new LoginController;
         $route->request();
     break;
     case '/login':
-        LoginController::view(str_replace($pathInfo,"/", "{$rota[0]}"));
+        LoginController::view($pathInfo);
         $route = new LoginController;
         $route->request();
     break;
     case '/cadastro':
-       CadastroController::view(str_replace($pathInfo,"/", "{$rota[1]}"));
+       CadastroController::view($pathInfo);
        $route = new CadastroController;
        $route->request();
     break;
     case '/meus-filmes':
-        MeusFilmesController::view(str_replace($pathInfo,"/", "{$rota[2]}"));
+        MeusFilmesController::view($pathInfo);
     break;
     case '/novo-filme':
-        echo 'novo filme';
+        NovoFilmeController::view($pathInfo);
+        $filme = new NovoFilmeController;
+        $filme->novoFilme();
     break;
     case '/detalhes-filme':
-        echo 'detalhes do filme';
+        DetalhesFilmeController::view($pathInfo);
     break;
     case '/logout':
-        LogoutController::logout(str_replace($pathInfo,"/", "{$rota[0]}"));
+        LogoutController::logout($pathInfo);
+    break;
+    case '/explorar';
+        ExplorarController::view($pathInfo);
     break;
     default:
-        echo 'página não encontrada';
+       NotFoundController::notFound($pathInfo);
     break;
 }

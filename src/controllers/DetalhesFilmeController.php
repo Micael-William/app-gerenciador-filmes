@@ -1,23 +1,21 @@
 <?php
 namespace App\src;
 use App\models\FilmeModel;
-class MeusFilmesController 
+
+class DetalhesFilmeController
 {
-    public static function view($view = null)
+    public static function view($view)
     {
         $sessao = $_SESSION;
         $sessao = $sessao['dados']['nome'] ? $sessao['dados']['nome'] : null;
-        $filmes = self::filmes();
+        $id = $_GET['id'] ?? null;
+        $filme = self::getFilme($id);
         return require_once "../views/{$view}.php";
     }
 
-
-    public static function filmes()
+    public static function getFilme($id)
     {
-        $user_id = $_SESSION['dados']['id'] ?? null;
         $filme = new FilmeModel;
-        $filmes = $filme->all($user_id);
-
-        return $filmes;
+        return $filme->find($id);
     }
 }

@@ -30,29 +30,26 @@
                     <a href="/cadastro">Cadastro</a>
                 </div>
             </div>
-            <?php if(isset($sessao['aviso'])): ?>
+            
+            <?php 
+                require_once "../src/session/sessao.php";
+                $mensagem = sessao($sessao);
+            ?>
+            <?php if(!$mensagem == null):?>
                 <div class="alert-danger">
-                    <?php foreach($sessao['aviso'] as $aviso): ?>
-                        <?= $aviso . '<br>' ?>
-                    <?php endforeach; ?>
+                    <?= $mensagem; ?>
                 </div>
-            <?php endif; ?>
-
-            <?php if(isset($sessao['cadastro'])): ?>
-                <div class="alert-danger">
-                    <?= $sessao['cadastro'] . '<br>' ?>
-                </div>
-            <?php endif; ?>
-
+           <?php endif; ?>
+           
             <form action="" method="POST">
                 <h1 class="">Acesse sua conta</h1>
                 <div>
                     <img src="../img/icones/icon/Vector-8.png" alt="logo-campo-email">
-                    <input type="text" name="email" id="email" placeholder="E-mail">
+                    <input type="text" name="email" id="email" placeholder="E-mail" value="<?= isset($_SESSION['input']) ? $_SESSION['input'] : ''; ?>">
                 </div>
                 <div>
                     <img src="../img/icones/icon/Vector-9.png" alt="logo-campo-senha">
-                    <input type="password" name="password" id="senha" placeholder="Senha"   >
+                    <input type="password" name="password" id="senha" placeholder="Senha">
                 </div>
                 <button type="submit">Entrar</button>
             </form>

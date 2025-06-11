@@ -239,16 +239,16 @@ body {
     h2{
         color: #fff;
         font-family: monospace;
-        font-size: 25px;
+        font-size: 38px;
     }
     p{
         color: #fff;
         font-family: monospace;
-        font-size: 18px;
+        font-size: 28px;
         margin-top: 15px;
     }
     .fundo-img{
-        width: 90%;
+        width: 60vw;
         height: 100vh;
         object-fit: cover;
     }
@@ -262,6 +262,7 @@ body {
         font-weight: bold;
         font-size: 24px;
         font-family: monospace;
+        margin-top: 35px;
     }
     a {
         text-decoration: none;
@@ -280,7 +281,7 @@ body {
     }
     form div {
         display: flex;
-        width: 30vw;
+        width: 25vw;
         background-color: #1A1B2D;
         border-radius: 6px;
         gap: 8px;

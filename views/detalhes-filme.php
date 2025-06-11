@@ -3,35 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/cabecalho.css">
-    <link rel="stylesheet" href="public/css/detalhes-filme.css">
+    <link rel="stylesheet" href="../css/cabecalho.css">
+    <link rel="stylesheet" href="../css/detalhes-filme.css">
     <title>Detalhes do Filme</title>
 </head>
 <body>
-    <?php require_once "./views/partials/header.php" ?>
+    <?php require_once "partials/header.php" ?>
 
     <div class="container">
         <section class="secao-detalhes">
             <div>
-                <img src="public/img/imagens/Cover-1.png" alt="">
+                <img src="<?=$filme['imagem_path'] ? '../uploads/'.$filme['imagem_path'] : 0?>" alt="filme">
             </div>
             <div>
                 <a href="/">Voltar</a>
-                <h1>Pobres criaturas</h1>
-                <span class="categoria">Categoria:<p class="tipo">Drama</p></span>
+                <h1><?= $filme['titulo'] ?></h1>
+                <span class="categoria">Categoria:<p class="tipo"><?= $filme['categoria']?></p></span>
                 
                 <span class="ano-filme">Ano: 
-                    <p class="ano">2023</p>
+                    <p class="ano"><?= $filme['ano']?></p>
                 </span>
                 <div class="estrelas">
-                    <img src="public/img/icones/Icon/Vector-1.png" alt="">
-                    <img src="public/img/icones/Icon/Vector-1.png" alt="">
-                    <img src="public/img/icones/Icon/Vector-1.png" alt="">
-                    <img src="public/img/icones/Icon/Vector-1.png" alt="">
-                    <img src="public/img/icones/Icon/Vector-1.png" alt="">
+                    <img src="../img/icones/Icon/Vector-1.png" alt="">
+                    <img src="../img/icones/Icon/Vector-1.png" alt="">
+                    <img src="../img/icones/Icon/Vector-1.png" alt="">
+                    <img src="../img/icones/Icon/Vector-1.png" alt="">
+                    <img src="../img/icones/Icon/Vector-1.png" alt="">
                 </div>
                 <p class="legenda">
-                    Do cineasta Yorgos Lanthimos e da produtora Emma Stone, vem o conto incrível e a evolução fantástica de Bella Baxter (Stone), uma jovem mulher trazida de volta à vida pelo brilhante e pouco ortodoxo cientista Dr. Godwin Baxter (Willem Dafoe). Sob a proteção de Baxter, Bella está ansiosa para aprender. Faminta pela mundanidade que lhe falta, Bella foge com Duncan Wedderburn (Mark Ruffalo), um advogado astuto e depravado, em uma aventura relâmpago pelos continentes. Livre dos preconceitos de sua época, Bella se torna firme em seu propósito de defender a igualdade e a libertação.
+                    <?= $filme['descricao']?>
+                    <!-- Do cineasta Yorgos Lanthimos e da produtora Emma Stone, vem o conto incrível e a evolução fantástica de Bella Baxter (Stone), uma jovem mulher trazida de volta à vida pelo brilhante e pouco ortodoxo cientista Dr. Godwin Baxter (Willem Dafoe). Sob a proteção de Baxter, Bella está ansiosa para aprender. Faminta pela mundanidade que lhe falta, Bella foge com Duncan Wedderburn (Mark Ruffalo), um advogado astuto e depravado, em uma aventura relâmpago pelos continentes. Livre dos preconceitos de sua época, Bella se torna firme em seu propósito de defender a igualdade e a libertação. -->
                 </p>
             </div>
         </section>
@@ -42,14 +43,13 @@
             <div class="avaliar">
                 <h2>Avaliações</h2>
                 <button id="btn-abrir" class="btn-avaliar">
-                    <img class="logo" src="public/img/icones/Icon/Vector-1.png" alt="logo avaliar">
+                    <img class="logo" src="../img/icones/Icon/Vector-1.png" alt="logo avaliar">
                     Avaliar filme
                 </button>
             </div>
-
             <div class="avaliacoes">
                 <div class="perfil">
-                    <img class="logo-perfil" src="public/img/icones/Image.png" alt="perfil">
+                    <img class="logo-perfil" src="../img/icones/Image.png" alt="perfil">
                     <div class="nome">
                         <p>jordan felix</p>
                         <p class="filmes-avaliados">4 filmes avaliados</p>
@@ -61,12 +61,12 @@
                 </p>
                 <p class="aval">
                     4/5
-                    <img src="public/img/icones/Icon/estrela-roxa.png" alt="estrela">
+                    <img src="../img/icones/Icon/estrela-roxa.png" alt="estrela">
                 </p>
             </div>
             <div class="avaliacoes">
                 <div class="perfil">
-                    <img class="logo-perfil" src="public/img/icones/Image.png" alt="perfil">
+                    <img class="logo-perfil" src="../img/icones/Image.png" alt="perfil">
                     <div class="nome">
                         <p>Floyd Miles</p>
                         <p class="filmes-avaliados">4 filmes avaliados</p>
@@ -78,12 +78,12 @@
                 </p>
                 <p class="aval">
                     4/5
-                    <img src="public/img/icones/Icon/estrela-roxa.png" alt="estrela">
+                    <img src="../img/icones/Icon/estrela-roxa.png" alt="estrela">
                 </p>
             </div>
             <div class="avaliacoes">
                 <div class="perfil">
-                    <img class="logo-perfil" src="public/img/icones/Image.png" alt="perfil">
+                    <img class="logo-perfil" src="../img/icones/Image.png" alt="perfil">
                     <div class="nome">
                         <p>Jone Cooper</p>
                         <p class="filmes-avaliados">4 filmes avaliados</p>
@@ -95,7 +95,7 @@
                 </p>
                 <p class="aval">
                     4/5
-                    <img src="public/img/icones/Icon/estrela-roxa.png" alt="estrela">
+                    <img src="../img/icones/Icon/estrela-roxa.png" alt="estrela">
                 </p>
             </div>
         </section>
@@ -106,12 +106,12 @@
             <div class="modal-cabecalho">
                 <h3>Avaliar filme</h3>
                 <div class="container-logo">
-                    <img id="fechar" src="public/img/icones/Icon/Vector-11.png" alt="logo fechar">
+                    <img id="fechar" src="../img/icones/Icon/Vector-11.png" alt="logo fechar">
                 </div>
             </div>
             <div class="modal-body">
                 <div class="modal-conteudo">
-                    <img class="logo-filme" src="public/img/imagens/Cover-1.png" alt="logo">
+                    <img class="logo-filme" src="../img/imagens/Cover-1.png" alt="logo">
                     <div>
                         <h4>Pobres Criaturas</h4>
                         <span class="categoria">Categoria:<p class="tipo">Drama</p></span>
@@ -121,11 +121,11 @@
                         
                         <div class="estrelas-minha-avaliacao">
                             <p class="minha-avaliacao">Sua avaliacao</p>
-                            <img src="public/img/icones/Icon/estrela-borda.png" alt="icone estrela">
-                            <img src="public/img/icones/Icon/estrela-borda.png" alt="icone estrela">
-                            <img src="public/img/icones/Icon/estrela-borda.png" alt="icone estrela">
-                            <img src="public/img/icones/Icon/estrela-borda.png" alt="icone estrela">
-                            <img src="public/img/icones/Icon/estrela-borda.png" alt="icone estrela">
+                            <img src="../img/icones/Icon/estrela-borda.png" alt="icone estrela">
+                            <img src="../img/icones/Icon/estrela-borda.png" alt="icone estrela">
+                            <img src="../img/icones/Icon/estrela-borda.png" alt="icone estrela">
+                            <img src="../img/icones/Icon/estrela-borda.png" alt="icone estrela">
+                            <img src="../img/icones/Icon/estrela-borda.png" alt="icone estrela">
                         </div>
                     </div>
                 </div>
@@ -139,6 +139,6 @@
         </section>
     </div>
    
-    <script src="public/js/index.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 </html>

@@ -6,19 +6,19 @@ estrela.forEach((element, index, estrelas) => {
     element.addEventListener('click', () => {
         avaliacao = index;
         estrelas.forEach((e, i) => {
-            e.src = i <= index ? './public/img/icones/Icon/estrela-roxa.png' : './public/img/icones/Icon/Vector-1.png';
+            e.src = i <= index ? '../img/icones/Icon/estrela-roxa.png' : '../img/icones/Icon/Vector-1.png';
         });
     });
 
     element.addEventListener('mouseenter', () => {
         estrelas.forEach((e, i) => {
-            e.src = i <= index ? './public/img/icones/Icon/estrela-roxa.png' : './public/img/icones/Icon/Vector-1.png';
+            e.src = i <= index ? '../img/icones/Icon/estrela-roxa.png' : '../img/icones/Icon/Vector-1.png';
         });
     });
 
     element.addEventListener('mouseleave', () => {
         estrelas.forEach((e, i) => {
-            e.src = i <= avaliacao ? './public/img/icones/Icon/estrela-roxa.png' : './public/img/icones/Icon/Vector-1.png';
+            e.src = i <= avaliacao ? '../img/icones/Icon/estrela-roxa.png' : '../img/icones/Icon/Vector-1.png';
         });
     });
 });
@@ -30,19 +30,19 @@ estrelaAval.forEach((element, index, Content) => {
     element.addEventListener('click', () => {
         avaliacao = index;
         Content.forEach((e, i) => {
-            e.src = i <= index ? './public/img/icones/Icon/estrela-roxa.png' : './public/img/icones/Icon/Vector-1.png';
+            e.src = i <= index ? '../img/icones/Icon/estrela-roxa.png' : '../img/icones/Icon/Vector-1.png';
         });
     });
 
     element.addEventListener('mouseenter', () => {
         Content.forEach((e, i) => {
-            e.src = i <= index ? './public/img/icones/Icon/estrela-roxa.png' : './public/img/icones/Icon/Vector-1.png';
+            e.src = i <= index ? '../img/icones/Icon/estrela-roxa.png' : '../img/icones/Icon/Vector-1.png';
         });
     });
 
     element.addEventListener('mouseleave', () => {
         Content.forEach((e, i) => {
-            e.src = i <= avaliacao ? './public/img/icones/Icon/estrela-roxa.png' : './public/img/icones/Icon/Vector-1.png';
+            e.src = i <= avaliacao ? '../img/icones/Icon/estrela-roxa.png' : '../img/icones/Icon/Vector-1.png';
         });
     });
 });

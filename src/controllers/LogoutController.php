@@ -3,10 +3,14 @@ namespace App\src;
 
 class LogoutController
 {
-    public static function logout($view = null)
+    public static function logout($view)
     {
         session_destroy();
-        header("Location: /{$view}");
-        exit();
+        self::redirect();
+    }
+
+    public static function redirect(): void
+    {
+        header("Location: /login");
     }
 }

@@ -4,6 +4,7 @@
         "psr-4": {
             "Dell\\AppFilmes\\": "src/",
             "App\\src\\": "src/controllers/",
+            "App\\models\\": "src/models/",
             "App\\config\\": "config/"
         }
     },
