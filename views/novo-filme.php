@@ -28,7 +28,7 @@
                 <label for="filme">Fazer upload
                     <img src="public/img/icones/icon/Vector.png" alt="download">
                 </label>
-                <input type="file" name="filme" id="filme">
+                <input type="file" accept="image/*" name="filme" id="filme">
             </div>
 
             <div class="container-form">

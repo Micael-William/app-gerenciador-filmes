@@ -1,0 +1,28 @@
+@media (max-width: 480px){
+    body {
+        overflow-x: hidden;
+    }
+
+    .secao-cadastro .logo-titulo {
+        display: none;
+    }
+
+    .secao-cadastro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        /* border: solid #fff; */
+    }
+
+    section .form {
+        position: absolute;
+        left: -90px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 60vw;
+        /* border: solid #fff; */
+    }
+}

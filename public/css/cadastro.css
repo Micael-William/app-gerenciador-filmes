@@ -1,5 +1,4 @@
-@import url("links.css");
-
+@import url("./links.css");
 body {
     background-color: #131320;
     overflow-x: hidden;
@@ -9,7 +8,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .alert-danger {
     background-color: red;
     color: #fff;
@@ -29,7 +27,7 @@ body {
         justify-content: center;
         align-items: center;
     }
-     .logo-titulo {
+    .logo-titulo {
         display: none;
     }
     .form {
@@ -219,7 +217,7 @@ body {
 }
 
 @media(min-width: 1400px){
-    .secao-login {
+    .secao-cadastro {
         height: 50vh;
         width: 100vw;
         display: flex;
@@ -235,7 +233,7 @@ body {
     }
     .titulo{
         position: absolute;
-        top: 750px;
+        top: 700px;
         left: 20px;
     }
     h2{
@@ -282,7 +280,7 @@ body {
     }
     form div {
         display: flex;
-        width: 25vw;
+        width: 30vw;
         background-color: #1A1B2D;
         border-radius: 6px;
         gap: 8px;

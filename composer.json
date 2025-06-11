@@ -2,7 +2,9 @@
     "name": "dell/app-filmes",
     "autoload": {
         "psr-4": {
-            "Dell\\AppFilmes\\": "src/"
+            "Dell\\AppFilmes\\": "src/",
+            "App\\src\\": "src/controllers/",
+            "App\\config\\": "config/"
         }
     },
     "authors": [

@@ -121,11 +121,11 @@
                         
                         <div class="estrelas-minha-avaliacao">
                             <p class="minha-avaliacao">Sua avaliacao</p>
-                            <img src="public/img/icones/Icon/estrela-borda.png" alt="">
-                            <img src="public/img/icones/Icon/estrela-borda.png" alt="">
-                            <img src="public/img/icones/Icon/estrela-borda.png" alt="">
-                            <img src="public/img/icones/Icon/estrela-borda.png" alt="">
-                            <img src="public/img/icones/Icon/estrela-borda.png" alt="">
+                            <img src="public/img/icones/Icon/estrela-borda.png" alt="icone estrela">
+                            <img src="public/img/icones/Icon/estrela-borda.png" alt="icone estrela">
+                            <img src="public/img/icones/Icon/estrela-borda.png" alt="icone estrela">
+                            <img src="public/img/icones/Icon/estrela-borda.png" alt="icone estrela">
+                            <img src="public/img/icones/Icon/estrela-borda.png" alt="icone estrela">
                         </div>
                     </div>
                 </div>
